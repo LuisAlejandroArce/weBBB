@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Final- Cultura Digital 2</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            /* Paleta de colores */
+            --primary-color: #CAB7A2;
+            --secondary-color: #BFB59E;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        
+        .navbar {
+            background-color: var(--dark-color);
+        }
+        
+        .navbar-brand, .nav-link {
+            color: var(--light-color) !important;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+        
+        .card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-title {
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 40px 0;
+        }
+        
+        .social-icon {
+            font-size: 24px;
+            margin: 0 10px;
+            color: var(--light-color);
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: var(--secondary-color);
+        }
+        
+        .about-img {
+            border-radius: 50%;
+            max-width: 200px;
+            border: 5px solid var(--primary-color);
+        }
+        
+        .resource-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .resource-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-form .form-control {
+            margin-bottom: 15px;
+            border: 1px solid var(--primary-color);
+        }
+        
+        .parcial-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    
+html {
+    scroll-behavior: auto !important;
+}
+</style>
+</head>
+<body>
+    <!-- Navbar con menú de hamburguesa -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-code"></i> Trabajo Final</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acerca.html">acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.HTML">catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recursos.HTML">recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.HTML">contacto</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <h1>Bienvenido a Mi Trabajo Final</h1>
+            <p class="lead">Cultura Digital 2 - Instituto Libertad</p>
+            <a href="#catalogo" class="btn btn-light btn-lg mt-3">Ver mis trabajos</a>
+        </div>
+    </section>
+
+    <!-- Sección Acerca de -->
+    <section id="acerca" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Acerca de</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="foto.JPEG" alt="Foto de perfil" class="about-img img-fluid">
+                </div>
+                <div class="col-md-8">
+                    <h3>¿Quién soy?</h3>
+                    <p>Soy estudiante del curso de <strong>Cultura Digital 2</strong> en el Instituto Libertad. Este portafolio recopila todos los trabajos realizados durante el semestre, mostrando mi progreso y aprendizaje en diseño web, programación HTML, CSS y el uso de frameworks.</p>
+                    <p>A través de este curso, he adquirido habilidades en:</p>
+                    <ul>
+                        <li>Diseño de páginas web con HTML5 y CSS3</li>
+                        <li>Aplicación de conceptos de teoría del color</li>
+                        <li>Uso de frameworks responsive como Bootstrap</li>
+                        <li>Creación de contenido digital con herramientas como Canva y Piktochart</li>
+                        <li>Implementación de JavaScript para efectos interactivos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Sección de Catálogo -->
+    <section id="catalogo" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+		<iframe height="700" name="visor" style="border: 2px solid #ccc;" width="100%"></iframe></div><div class="text-center mb-5">
+                <h2 class="section-title">Catálogo de Trabajos</h2>
+            </div>
+
+            <!-- Parcial 1 -->
+            <div class="parcial-header">
+                <h3>Parcial 1</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Diagrama de Flujo
+                        <div class="card-body">
+                            <h5 class="card-title">Diagrama de Flujo – Determinación de Triángulos</h5>
+                            <p class="card-text">Desarrollo de un diagrama que muestra el proceso lógico para determinar tipos de triángulos según sus características.</p>
+                            <a class="btn btn-primary" href="file:///D:/tarea/tareas123/determinaciondeltrinagulo.pdf" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Práctica Piktochart
+                        <div class="card-body">
+                            <h5 class="card-title">Práctica de Piktochart o Canva</h5>
+                            <p class="card-text">Creación de infografías y presentaciones visuales utilizando herramientas de diseño gráfico online.</p>
+                          <a class="btn btn-primary" href="file:///D:/tarea/tareas123/practica.pdf" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Uso de IA
+                        <div class="card-body">
+                            <h5 class="card-title">Tarea 3 – Uso de IA's</h5>
+                            <p class="card-text">Exploración de herramientas de inteligencia artificial y sus aplicaciones en el diseño y desarrollo web.</p>
+                           <a class="btn btn-primary" href="file:///D:/tarea/tareas123/usodeia's.pdf" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                       Teoría del Color
+                        <div class="card-body">
+                            <h5 class="card-title">Tarea 4 – Práctica de Teoría del Color y Diseño Gráfico</h5>
+                            <p class="card-text">Aplicación de conceptos de teoría del color para crear diseños visualmente atractivos y coherentes.</p>
+                            <a class="btn btn-primary" href="file:///D:/tarea/tareas123/usodecolores.pdf" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Página web tema interés
+                        <div class="card-body">
+                            <h5 class="card-title">(Opcional) Página Web sobre un Tema de Interés</h5>
+                            <p class="card-text">Desarrollo de una página web sencilla enfocada en un tema personal de interés.</p>
+                           <a href="file:///D:/tarea/error404.html" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parcial 2 -->
+            <div class="parcial-header mt-5">
+                <h3>Parcial 2</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Investigación
+                        <div class="card-body">
+                            <h5 class="card-title">Investigación Explicativa vs. Investigación Aplicada</h5>
+                            <p class="card-text">Análisis comparativo entre dos metodologías de investigación y sus aplicaciones.</p>
+                          <a class="btn btn-primary" href="file:///D:/tarea/tareas123/investigaci%C3%B3n.pdf" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Caso de estudio
+                        <div class="card-body">
+                            <h5 class="card-title">Caso de estudio sobre el tráfico en Ciudad Obregón</h5>
+                            <p class="card-text">Análisis del problema de tráfico en Ciudad Obregón, Sonora, y propuestas de solución.</p>
+                           <a class="btn btn-primary" href="file:///D:/tarea/tareas123/causadeltrafico.pdf" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                       Elección tema web
+                        <div class="card-body">
+                            <h5 class="card-title">Elección y Creación de un Tema para la Elaboración de un Sitio Web</h5>
+                            <p class="card-text">Proceso de selección y planificación para el desarrollo de un sitio web personal.</p>
+                            <a class="btn btn-primary" href="file:///D:/tarea/tareas123/sitioweb.html" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                       Página Web HTML
+                        <div class="card-body">
+                            <h5 class="card-title">Crear una Página Web Básica con HTML</h5>
+                            <p class="card-text">Desarrollo de una página web utilizando solamente HTML para estructurar el contenido.</p>
+                           <a class="btn btn-primary" href="file:///D:/tarea/tareas123/sitioweb.html" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        CSS3
+                        <div class="card-body">
+                            <h5 class="card-title">Agregar Estilos CSS3 a la Página Web</h5>
+                            <p class="card-text">Aplicación de estilos CSS3 para mejorar la presentación visual de una página web.</p>
+                            <a class="btn btn-primary" href="file:///D:/tarea/tareas123/sitioweb.html" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Frameworks
+                        <div class="card-body">
+                            <h5 class="card-title">Investigación de Frameworks y CDN</h5>
+                            <p class="card-text">Estudio sobre los diferentes frameworks CSS y JavaScript, y el uso de CDN para implementarlos.</p>
+                            <a class="btn btn-primary" href="file:///D:/tarea/tareas123/cdn.pdf" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        JavaScript
+                        <div class="card-body">
+                            <h5 class="card-title">(Opcional) Agregar un Menú Interactivo con JavaScript</h5>
+                            <p class="card-text">Implementación de un menú interactivo utilizando JavaScript para mejorar la experiencia de usuario.</p>
+                            <a href="file:///D:/tarea/error404.html" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parcial 3 -->
+            <div class="parcial-header mt-5">
+                <h3>Parcial 3</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Etiquetas HTML
+                        <div class="card-body">
+                            <h5 class="card-title">Aplicación de Etiquetas HTML – &lt;strong&gt;, &lt;b&gt;, &lt;em&gt;, etc.</h5>
+                            <p class="card-text">Uso correcto de etiquetas HTML para dar formato y enfatizar texto en páginas web.</p>
+                           <a class="btn btn-primary" href="file:///D:/tarea/tareas123/sitioweb.html" class="btn btn-primary" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Etiquetas div img
+                        <div class="card-body">
+                            <h5 class="card-title">Aplicación de Etiquetas HTML – &lt;div&gt;, &lt;img&gt;, etc.</h5>
+                            <p class="card-text">Implementación de estructuras y elementos multimedia en páginas web con HTML.</p>
+                            <a class="btn btn-primary" href="file:///D:/tarea/tareas123/index,2.html" class="btn btn-primary" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Tablas HTML
+                        <div class="card-body">
+                            <h5 class="card-title">Aplicación de Etiquetas HTML – &lt;table&gt;</h5>
+                            <p class="card-text">Creación y formateo de tablas para presentar información estructurada en páginas web.</p>
+                           <a class="btn btn-primary" href="file:///D:/tarea/tareas123/index,2.html" class="btn btn-primary" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            Formulario
+                            <h5 class="card-title">Formularios y Elementos de Entrada en HTML – Parte 1</h5>
+                            <p class="card-text">Diseño e implementación de formularios para recopilación de datos en páginas web.</p>
+                            <a class="btn btn-primary" href="file:///D:/tarea/tareas123/formulario.html" class="btn btn-primary" target="visor">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parcial 4 -->
+            <div class="parcial-header mt-5">
+                <h3>Parcial 4</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Video Valor
+                        <div class="card-body">
+                            <h5 class="card-title">(Opcional) Video del Valor del Mes</h5>
+                            <p class="card-text">Producción de un video sobre un valor ético o moral relevante para la comunidad.</p>
+                            <a href="D:\tarea\tareas123\puntoextra.mp4" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        Sitio Web Final
+                        <div class="card-body">
+                            <h5 class="card-title">Entrega Final del Sitio Web</h5>
+                            <p class="card-text">Desarrollo completo del sitio web de portafolio, aplicando todos los conocimientos adquiridos durante el semestre.</p>
+                            <a href="file:///D:/tarea/paginas/index.html" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+
+    <!-- Sección de Recursos -->
+    <section id="recursos" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Recursos</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="resource-item">
+                        <h4><i class="fas fa-book"></i> Tutoriales y Documentación</h4>
+                        <p>Enlaces a documentación y tutoriales útiles para el desarrollo web:</p>
+                        <ul>
+                            <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - Tutoriales de HTML, CSS y JavaScript</li>
+                            <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a> - Documentación completa sobre tecnologías web</li>
+                            <li><a href="https://getbootstrap.com/docs/" target="_blank">Bootstrap</a> - Documentación oficial de Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="resource-item">
+                        <h4><i class="fas fa-tools"></i> Herramientas</h4>
+                        <p>Herramientas útiles para el diseño y desarrollo web:</p>
+                        <ul>
+                            <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> - Editor de código</li>
+                            <li><a href="https://www.figma.com/" target="_blank">Figma</a> - Diseño de interfaces</li>
+                            <li><a href="https://www.canva.com/" target="_blank">Canva</a> - Herramienta de diseño gráfico</li>
+                            <li><a href="https://piktochart.com/" target="_blank">Piktochart</a> - Creación de infografías</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="resource-item">
+                        <h4><i class="fas fa-graduation-cap"></i> Cursos Recomendados</h4>
+                        <p>Recursos adicionales para seguir aprendiendo:</p>
+                        <ul>
+                            <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> - Cursos gratuitos de programación</li>
+                            <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a> - Cursos interactivos de programación</li>
+                            <li><a href="https://www.udemy.com/" target="_blank">Udemy</a> - Cursos de desarrollo web</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="resource-item">
+                        <h4><i class="fas fa-palette"></i> Inspiración y Recursos Visuales</h4>
+                        <p>Sitios para obtener inspiración y recursos para diseño web:</p>
+                        <ul>
+                            <li><a href="https://coolors.co/" target="_blank">Coolors</a> - Generador de paletas de colores</li>
+                            <li><a href="https://unsplash.com/" target="_blank">Unsplash</a> - Imágenes gratuitas de alta calidad</li>
+                            <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a> - Fuentes tipográficas gratuitas</li>
+                            <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a> - Íconos vectoriales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Contacto</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <form class="contact-form">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="asunto" class="form-label">Asunto</label>
+                                    <input type="text" class="form-control" id="asunto" placeholder="Asunto del mensaje">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Trabajo Final</h4>
+                    <p>Cultura Digital 2 - Instituto Libertad</p>
+                    <p> 2025 - Espero les haya gustado</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-white">index</a></li>
+                        <li><a href="#acerca" class="text-white">acerca</a></li>
+                        <li><a href="#catalogo" class="text-white">catalogo</a></li>
+                        <li><a href="#recursos" class="text-white">recurso</a></li>
+                        <li><a href="#contacto" class="text-white">contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Sígueme</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p class="mt-3">Publicado en <a href="https://www.instagram.com/alex_aslv/?next=%2Freels%2FDA7vpxPoDNI%2F" class="text-white">Luis Alejandro Arce Silva</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
